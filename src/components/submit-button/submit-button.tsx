@@ -14,7 +14,7 @@ export interface SubmitButtonProps {
 export const SubmitButton = ({ className, children }: SubmitButtonProps) => {
     return (
         <div className={classNames(styles.root, className, appStyles['text-center'])}>
-            <button>{children}</button>
+            <button className={styles.button1}>{children}</button>
         </div>
     );
 };
