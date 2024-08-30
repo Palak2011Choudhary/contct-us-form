@@ -1,29 +1,34 @@
 import styles from './App.module.scss';
-import ViteSvg from './assets/vite.svg';
-import TypescriptSvg from './assets/typescript.svg';
+import { Input } from './components/input/input';
+import { FormLabel } from './components/form-label/form-label';
+import { SubmitButton } from './components/submit-button/submit-button';
 
 function App() {
     return (
-        <div className={styles.App}>
-            <h2>Welcome to your App Component 🎉</h2>
-            <span>
-                Double click to edit App component
+        <div>
+            <form>
+                <FormLabel className={styles['text-center']} htmlFor="name">
+                    Name
+                </FormLabel>
+                <Input id="name" name="name" />
                 <br />
-                &amp; drag here elements from + Add <b>Elements</b> Panel
-            </span>
-            <p
-                style={{
-                    fontSize: '12px',
-                    marginTop: '80px',
-                    display: 'flex',
-                    gap: '3px',
-                    justifyContent: 'center',
-                }}
-            >
-                This project is using <img src={ViteSvg} width="12" />+
-                <img src={TypescriptSvg} width="12" />
-                Visit vitejs.dev to learn more.
-            </p>
+                <FormLabel className={styles['text-center']} htmlFor="email">
+                    Email
+                </FormLabel>
+                <Input id="email" name="email" />
+                <br />
+                <FormLabel className={styles['text-center']} htmlFor="contact_no">
+                    Contact No
+                </FormLabel>
+                <Input id="contact_no" name="contact_no" />
+                <br />
+                <FormLabel className={styles['text-center']} htmlFor="message">
+                    Message
+                </FormLabel>
+            </form>
+            <Input id="message" name="message" />
+            <br />
+            <SubmitButton>Submit</SubmitButton>
         </div>
     );
 }
